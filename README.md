@@ -7,4 +7,4 @@ The website I developed while learning react and .net core web api technologies
 ![Screenshot_3](https://github.com/user-attachments/assets/8619f768-1bd0-443c-a7c8-801551933830)
 
 
-![Screenshot_4](https://github.com/user-attachments/assets/0facfb46-3f33-4b16-ae79-cbc8f299ba1d)
+![Screenshot_6](https://github.com/user-attachments/assets/2a689bca-8f6c-4b3b-a395-8069ca6ab07c)
