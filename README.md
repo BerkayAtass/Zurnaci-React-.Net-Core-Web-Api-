@@ -2,13 +2,15 @@
 The website I developed while learning react and .net core web api technologies
 
 Opening Steps
-'''bash
+```bash
+# Navigate to the frontend directory and start the development server
 cd frontend
-nmp run dev
+npm run dev
 
+# Navigate to the admin directory and start the development server
 cd admin
 npm run dev
-'''
+```
 
 ![Screenshot_2](https://github.com/user-attachments/assets/c3a3a212-a7a9-4430-a6fa-9fe0b089a586)
 
