@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ZurnaciApi",
+    "\\ZurnaciApi\\Controllers",
+    "\\ZurnaciApi\\Data",
+    "\\ZurnaciApi\\Migrations"
+  ],
+  "SelectedNode": "\\ZurnaciApi\\Controllers\\OrderController.cs",
+  "PreviewInSolutionExplorer": false
+}

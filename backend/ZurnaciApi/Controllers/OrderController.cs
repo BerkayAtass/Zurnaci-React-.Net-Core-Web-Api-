@@ -24,7 +24,7 @@ namespace ZurnaciApi.Controllers
         }
 
         
-        [HttpGet("{id}:int")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<Order>> GetOrder([FromRoute] int id)
         {
             var order = await _context.Orders.FindAsync(id);
