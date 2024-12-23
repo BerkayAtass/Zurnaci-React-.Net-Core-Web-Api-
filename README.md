@@ -11,6 +11,8 @@ npm run dev
 cd admin
 npm run dev
 ```
+![Screenshot_6](https://github.com/user-attachments/assets/c829fb2f-590a-417c-8ba3-aed8c50edf8d)
+
 
 ![Screenshot_2](https://github.com/user-attachments/assets/c3a3a212-a7a9-4430-a6fa-9fe0b089a586)
 
