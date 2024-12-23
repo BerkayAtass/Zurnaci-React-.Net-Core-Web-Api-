@@ -1,12 +1,10 @@
-import React from 'react'
-import './FoodItem.css'
-import { assets } from '../../assets/assets'
-import { useContext } from 'react'
-import { StoreContext } from '../../context/StoreContext'
+import React from 'react';
+import './FoodItem.css';
+import { assets } from '../../assets/assets';
+import { useContext } from 'react';
+import { StoreContext } from '../../context/StoreContext';
 
 const FoodItem = ({ id, name, price, description, image }) => {
-
-    // const [itemCount, setItemCount] = useState(0);
     const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
 
     return (
@@ -31,9 +29,8 @@ const FoodItem = ({ id, name, price, description, image }) => {
                 <p className="food-item-desc">{description}</p>
                 <p className="food-item-price">${price}</p>
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default FoodItem
+export default FoodItem;

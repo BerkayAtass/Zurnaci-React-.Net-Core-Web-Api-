@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZurnaciApi", "ZurnaciApi.csproj", "{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

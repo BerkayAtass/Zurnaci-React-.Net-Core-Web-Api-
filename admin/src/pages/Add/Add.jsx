@@ -3,6 +3,8 @@ import './Add.css'
 import { assets } from '../../assets/assets'
 import { useState } from 'react'
 // import { useEffect } from 'react'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 
 const Add = () => {
@@ -21,13 +23,39 @@ const Add = () => {
         setData(data => ({ ...data, [name]: value }))
     }
 
+    const onSubmitHandler = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append('name', data.name);
+        formData.append('description', data.description);
+        formData.append('category', data.category);
+        formData.append('price', Number(data.price));
+        formData.append('image', image.name);
+
+        try {
+            const response = await axios.post('https://localhost:7007/api/food', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            console.log('Success:', response.data);
+            toast.success('Product added successfully');
+        } catch (error) {
+            console.error('Error uploading product and image:', error.response?.data || error.message);
+        }
+    };
+
+
+
+
     // useEffect(() => {
     //     console.log(data)
     // }, [data])
 
     return (
         <div className='add'>
-            <form action="" className="flex-col">
+            <form onSubmit={onSubmitHandler} className="flex-col">
                 <div className="add-image-upload flex-col">
                     <p>Upload Image</p>
                     <label htmlFor="image">
@@ -47,8 +75,8 @@ const Add = () => {
                     <div className="add-category flex-col">
                         <p>Product category</p>
                         <select onChange={onChangeHandler} name="category">
-                            <option value="Salad">Salad</option>
-                            <option value="Rolls">Rolls</option>
+                            <option value="Zurna">Salad</option>
+                            <option value="Salad">Rolls</option>
                             <option value="Deserts">Deserts</option>
                             <option value="Sandwich">Sandwich</option>
                             <option value="Cake">Cake</option>
