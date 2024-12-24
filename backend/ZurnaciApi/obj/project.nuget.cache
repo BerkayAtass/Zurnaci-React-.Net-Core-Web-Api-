@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2w4/EF5G5Ko=",
+  "dgSpecHash": "eaQI7riSUms=",
   "success": true,
-  "projectFilePath": "C:\\Users\\berka\\OneDrive\\Masaüstü\\zurnaci\\backend\\ZurnaciApi\\ZurnaciApi.csproj",
+  "projectFilePath": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\ZurnaciApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\berka\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

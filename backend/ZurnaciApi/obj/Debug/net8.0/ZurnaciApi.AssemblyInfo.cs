@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZurnaciApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82680b7b9dd141f681a21a4bfdd0b17809637ecc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc41684d2007324a0124373a0c237f6440e4dc0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZurnaciApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZurnaciApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -31,7 +31,8 @@ const Add = () => {
         formData.append('description', data.description);
         formData.append('category', data.category);
         formData.append('price', Number(data.price));
-        formData.append('image', image.name);
+        formData.append('Image', image.name);
+        formData.append('imageFile', image);
 
         try {
             const response = await axios.post('https://localhost:7007/api/food', formData, {
@@ -41,11 +42,18 @@ const Add = () => {
             });
             console.log('Success:', response.data);
             toast.success('Product added successfully');
+            setData({
+                name: '',
+                description: '',
+                category: '',
+                price: ''
+            });
+            setImage(false);
         } catch (error) {
             console.error('Error uploading product and image:', error.response?.data || error.message);
+            toast.error('Failed to add product');
         }
     };
-
 
 
 
