@@ -1,0 +1,24 @@
+.list-table {
+
+    border-spacing: 15px;
+    height: 100%;
+}
+
+/* Modal'ın ortalanması için */
+.modal-container {
+    background-color: #e1c2ee;
+    /* Container arka plan rengi */
+    padding: 20px;
+    /* Container içinde boşluk */
+    border-radius: 8px;
+    /* Köşe yuvarlatma */
+}
+
+/* Modal'ın ortalanması için */
+.modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+}

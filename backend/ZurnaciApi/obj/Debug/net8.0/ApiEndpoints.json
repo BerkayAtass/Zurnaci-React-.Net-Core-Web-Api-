@@ -139,6 +139,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ZurnaciApi.Controllers.FoodController",
+    "Method": "GetFoodImage",
+    "RelativePath": "api/food/uploads/foods/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ZurnaciApi.Controllers.OrderController",
     "Method": "GetOrders",
     "RelativePath": "api/order",

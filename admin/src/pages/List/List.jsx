@@ -143,7 +143,7 @@ const List = ({ url }) => {
                                 {/* <input type="text" placeholder="Enter Category" className='form-control' value={editCategory} onChange={(e) => setEditCategory(e.target.value)} /> */}
                                 <p>Product category</p>
                                 <select onChange={(e) => setEditCategory(e.target.value)} name="category">
-                                    <option value={editCategory} selected>{editCategory}</option>
+                                    <option defaultValue={editCategory}>{editCategory}</option>
                                     <option value="Zurna">Salad</option>
                                     <option value="Salad">Rolls</option>
                                     <option value="Deserts">Deserts</option>
