@@ -19,8 +19,9 @@ builder.Services.AddCors();
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // DbContext'i servis olarak ekle
-builder.Services.AddDbContext <ApplicationDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 
 var app = builder.Build();
@@ -44,7 +45,7 @@ app.UseCors(policy =>
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Uploads", "Foods")),
-    RequestPath = "/uploads/foods"  // The URL path to access the files
+    RequestPath = "/uploads/foods"  
 });
 
 app.UseHttpsRedirection();

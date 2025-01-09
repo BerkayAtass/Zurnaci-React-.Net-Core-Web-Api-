@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\data\\zurnacidb.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:data\\zurnacidb.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\migrations\\20250109190906_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:migrations\\20250109190906_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\handler\\foodimageuploadhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:handler\\foodimageuploadhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\handler\\filedeletehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:handler\\filedeletehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\zurnaciapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:zurnaciapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\handler\\foodimageuploadhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:handler\\foodimageuploadhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\zurnaciapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:zurnaciapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\handler\\filedeletehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:handler\\filedeletehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\controllers\\foodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\zurnaciapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:zurnaciapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|c:\\users\\berka\\onedrive\\belgeler\\zurnaci-react-.net-core-web-api-\\backend\\zurnaciapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3EAFC59B-39F6-42D8-92E7-2F1DEAA1DAFD}|ZurnaciApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,23 +74,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 283,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T13:08:14.453Z"
+              "DocumentIndex": 0,
+              "Title": "ZurnaciDB.db",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Data\\ZurnaciDB.db",
+              "RelativeDocumentMoniker": "Data\\ZurnaciDB.db",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Data\\ZurnaciDB.db",
+              "RelativeToolTip": "Data\\ZurnaciDB.db",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGHSURBVDhPjZPNSxtBGIefXTcSYlv2T1CKWAVFSgsVvClCexBEqteK5yJEl22gheLBD4KCIPpneGwp4hcKNdQqiGDxkNBW8WI\u002BDtltkp2Ml\u002B6iO8b4wMB8/N6HeWFG4z8J20qDbPbXKlrGqzKUTCaPgi0pZTBP2FOyXC7XHAl7Sk5//pSzLKs7KAL0m4t6vBsbNx83RTdvSh4sME2T1ZVlXNc1DV1uhs\u002BVFtZ3f8hvOymlFb8dv065wclZhq/b\u002B2Rzea6yOda\u002BbPHz\u002BDQcC1AEhq7jOC4vutp52d2B4zoYhhILUE48IahUyoiqoCoEXqWC54lwLEARlEolNGBrL8XG7nc0DVIHhzjuv3AU7hI873zGyOAATx7FEJ7g4vKc33//MLe4xOmvs3BcFfgMvenndV8vhXyBmY82\u002BWyWaLQxHKstACgWHQwd3sctIpGGWy/X515BW\u002BtTPsQn6O15xcLcDC3N6le5VwDQFIsx\u002BnY4vB1QV1APzZ8k7Mk0aOod70RmZucXWgCuAZnTw6qHi\u002BiqAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-01-09T19:10:54.066Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "20250109190906_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Migrations\\20250109190906_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250109190906_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Migrations\\20250109190906_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250109190906_InitialCreate.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAgwE4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T19:09:06.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-24T11:16:55.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "FileDeleteHandler.cs",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Handler\\FileDeleteHandler.cs",
               "RelativeDocumentMoniker": "Handler\\FileDeleteHandler.cs",
@@ -82,19 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FoodImageUploadHandler.cs",
-              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Handler\\FoodImageUploadHandler.cs",
-              "RelativeDocumentMoniker": "Handler\\FoodImageUploadHandler.cs",
-              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Handler\\FoodImageUploadHandler.cs",
-              "RelativeToolTip": "Handler\\FoodImageUploadHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T12:02:36.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "FoodController.cs",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Controllers\\FoodController.cs",
               "RelativeDocumentMoniker": "Controllers\\FoodController.cs",
@@ -106,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Food.cs",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Models\\Food.cs",
               "RelativeDocumentMoniker": "Models\\Food.cs",
@@ -118,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Models\\Order.cs",
@@ -130,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -142,20 +175,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwCQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T11:21:26.694Z",
+              "WhenOpened": "2024-12-24T11:21:26.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FoodImageUploadHandler.cs",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Handler\\FoodImageUploadHandler.cs",
+              "RelativeDocumentMoniker": "Handler\\FoodImageUploadHandler.cs",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Handler\\FoodImageUploadHandler.cs",
+              "RelativeToolTip": "Handler\\FoodImageUploadHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T12:02:36.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContext .cs",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Data\\ApplicationDbContext .cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext .cs",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Data\\ApplicationDbContext .cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T10:41:16.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ZurnaciApi.csproj",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\ZurnaciApi.csproj",
+              "RelativeDocumentMoniker": "ZurnaciApi.csproj",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\ZurnaciApi.csproj",
+              "RelativeToolTip": "ZurnaciApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-09T19:04:41.155Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T10:57:08.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T13:08:14.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ZurnaciApi.http",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\ZurnaciApi.http",
               "RelativeDocumentMoniker": "ZurnaciApi.http",
@@ -167,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -176,18 +269,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-24T11:17:02.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\berka\\OneDrive\\Belgeler\\Zurnaci-React-.Net-Core-Web-Api-\\backend\\ZurnaciApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-24T11:16:55.02Z"
             }
           ]
         },

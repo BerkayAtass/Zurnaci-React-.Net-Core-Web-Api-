@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZurnaciApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a9d42a45d45671511bad30833c5bc9cd6cf722e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1d690b0aa1a25180365e666f4274736d434c56f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZurnaciApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZurnaciApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
