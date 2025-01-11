@@ -2,6 +2,8 @@ import { createContext, useEffect } from 'react';
 // import { food_list } from '../assets/assets';
 import { useState } from 'react';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+import { jwtDecode } from 'jwt-decode';
 
 export const StoreContext = createContext(null)
 
@@ -12,7 +14,28 @@ const StoreContextProvider = (props) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [auth, setAuth] = useState(false);
+
     useEffect(() => {
+        // Check for JWT in cookies on page load
+        const token = Cookies.get('jwt'); // Assuming 'jwt' is the cookie name
+
+        if (token) {
+            try {
+                const decoded = jwtDecode(token);
+                const isTokenValid = decoded.exp > Date.now() / 1000;
+                console.log(decoded);
+                if (isTokenValid) {
+                    setAuth(true);
+                }
+            } catch (err) {
+                console.error("Error decoding token:", err);
+            }
+        } else {
+            setAuth(false);
+        }
+
+        // Fetch the food list
         const fetchFoodList = async () => {
             try {
                 const response = await axios.get('https://localhost:7007/api/food');
@@ -51,6 +74,11 @@ const StoreContextProvider = (props) => {
     // useEffect(() => {
     //     console.log(cartItems);
     // }, [cartItems])
+
+    const logout = () => {
+        Cookies.remove('jwt');
+        setAuth(false);
+    }
 
     const getTotalCartAmount = () => {
         let totalAmount = 0;
@@ -92,7 +120,10 @@ const StoreContextProvider = (props) => {
         setCartItems,
         addToCart,
         removeFromCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        auth,
+        logout,
+        setAuth,
     }
 
     return (

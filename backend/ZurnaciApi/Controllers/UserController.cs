@@ -41,11 +41,13 @@ namespace ZurnaciApi.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> CreateUser([FromBody] User user)
         {
-            // Kullanıcı emailinin benzersiz olması kontrolü
+          
             if (_context.Users.Any(u => u.Email == user.Email))
             {
                 return Conflict(new { message = "This email is already registered." });
             }
+
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();

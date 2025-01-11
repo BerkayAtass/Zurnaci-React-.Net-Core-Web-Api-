@@ -238,3 +238,9 @@ C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\Zurnac
 C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\obj\Debug\net8.0\ZurnaciApi.pdb
 C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\obj\Debug\net8.0\ZurnaciApi.genruntimeconfig.cache
 C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\obj\Debug\net8.0\ref\ZurnaciApi.dll
+C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\berka\OneDrive\Belgeler\Zurnaci-React-.Net-Core-Web-Api-\backend\ZurnaciApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

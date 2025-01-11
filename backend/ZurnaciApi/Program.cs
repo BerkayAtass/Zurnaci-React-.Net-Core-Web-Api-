@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using ZurnaciApi.Data;
+using ZurnaciApi.Helpers;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors();
 
+builder.Services.AddScoped<JwtService>();
 
 // Connection string'i al
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -37,9 +40,10 @@ if (app.Environment.IsDevelopment())
 app.UseCors(policy =>
 {
     policy
-        .AllowAnyOrigin()
+        .WithOrigins("http://localhost:5173") 
         .AllowAnyMethod()
-        .AllowAnyHeader();
+        .AllowAnyHeader()
+        .AllowCredentials();
 });
 
 app.UseStaticFiles(new StaticFileOptions
