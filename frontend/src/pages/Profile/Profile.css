@@ -1,0 +1,48 @@
+.profile {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.password-change-form {
+    margin-top: 20px;
+}
+
+.password-change-form div {
+    margin-bottom: 15px;
+}
+
+.password-change-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.password-change-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-change-form button {
+    padding: 10px 20px;
+    background-color: #ab67c5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-change-form button:hover {
+    background-color: #725080;
+}

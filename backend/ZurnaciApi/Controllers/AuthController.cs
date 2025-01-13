@@ -7,7 +7,7 @@ using ZurnaciApi.Models;
 
 namespace ZurnaciApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -54,8 +54,9 @@ namespace ZurnaciApi.Controllers
 
             Response.Cookies.Append("jwt", jwt, new CookieOptions
             {
-                HttpOnly = true,
+                //HttpOnly = true,
                 Secure = true,
+                SameSite = SameSiteMode.None, // CORS desteği için
                 Expires = DateTime.Now.AddHours(1)
             });
 
@@ -68,7 +69,7 @@ namespace ZurnaciApi.Controllers
                 
                 Response.Cookies.Append("isAdmin", adminCookieValue, new CookieOptions
                 {
-                    HttpOnly = true,
+                    //HttpOnly = true,
                     Secure = true,  
                     Expires = DateTime.Now.AddHours(1)  
                 });
@@ -105,13 +106,69 @@ namespace ZurnaciApi.Controllers
             }
         }
 
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
+        {
+            try
+            {
+                var jwt = Request.Cookies["jwt"];
+                if (jwt == null)
+                {
+                    return Unauthorized();
+                }
+
+                var token = _jwtService.Verify(jwt);
+                int userId = int.Parse(token.Issuer);
+
+                var user = await _context.Users.FindAsync(userId);
+                if (user == null || !BCrypt.Net.BCrypt.Verify(resetPasswordDto.Password, user.Password))
+                {
+                    return BadRequest(new { message = "Invalid old password" });
+                }
+
+                user.Password = BCrypt.Net.BCrypt.HashPassword(resetPasswordDto.NewPassword);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { message = "Password updated successfully" });
+            }
+            catch
+            {
+                return BadRequest(new { message = "Failed to update password" });
+            }
+        }
+
+
+        //[HttpGet("validate-token")]
+        //public IActionResult ValidateToken()
+        //{
+        //    try
+        //    {
+        //        var jwt = Request.Cookies["jwt"];
+        //        if (jwt == null)
+        //        {
+        //            return Unauthorized();
+        //        }
+
+        //        var token = _jwtService.Verify(jwt);
+        //        return Ok(new { valid = true, token });
+        //    }
+        //    catch
+        //    {
+        //        return Unauthorized();
+        //    }
+        //}
+
         [HttpPost("logout")]
         public IActionResult Logout()
         {
-            Response.Cookies.Delete("jwt");
-            Response.Cookies.Delete("isAdmin");
+            Response.Cookies.Delete("jwt", new CookieOptions
+            {
+                //HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+            });
 
-            return Ok(new { message = "Logout successful" });
+            return Ok(new { message = "Logged out successfully" });
         }
     }
 }

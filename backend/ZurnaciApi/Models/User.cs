@@ -22,6 +22,6 @@ namespace ZurnaciApi.Models
 
         [Required]
         public int balance { get; set; } = 10000;
-        public string CartData { get; set; }
+        public List<int> OrderId { get; set; } = new List<int>();
     }
 }

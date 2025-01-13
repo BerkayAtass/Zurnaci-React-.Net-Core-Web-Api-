@@ -37,11 +37,12 @@ const LoginPopUp = ({ setShowLogin }) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                credentials: 'include',
+                credentials: "include",
                 body: JSON.stringify(userData),
             });
 
             const data = await response.json();
+
 
             if (!response.ok) {
                 throw new Error(data.message || 'Something went wrong');
@@ -51,8 +52,11 @@ const LoginPopUp = ({ setShowLogin }) => {
                 toast.success('Account created successfully');
             }
 
-            Cookies.set('jwt', data.token);
-            setAuth(true);
+            if (url === 'https://localhost:7007/api/auth/login') {
+                // Cookies.set('jwt-auth', data.token);
+                setAuth(true);
+
+            }
 
             console.log(data);
             setShowLogin(false);

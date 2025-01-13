@@ -55,7 +55,7 @@ namespace ZurnaciApi.Controllers
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
 
-        
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser([FromRoute] int id, [FromBody] User user)
         {
@@ -64,7 +64,14 @@ namespace ZurnaciApi.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(user).State = EntityState.Modified;
+            var existingUser = await _context.Users.FindAsync(id);
+            if (existingUser == null)
+            {
+                return NotFound();
+            }
+
+            existingUser.balance = user.balance;
+            _context.Entry(existingUser).State = EntityState.Modified;
 
             try
             {
@@ -85,7 +92,8 @@ namespace ZurnaciApi.Controllers
             return NoContent();
         }
 
-        
+
+
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteUser([FromRoute] int id)
         {

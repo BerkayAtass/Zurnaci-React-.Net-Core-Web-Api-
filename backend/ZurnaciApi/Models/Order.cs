@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using ZurnaciApi.Models.OrderDetail;
 
 namespace ZurnaciApi.Models
 {
@@ -10,16 +11,16 @@ namespace ZurnaciApi.Models
         public int Id { get; set; }
 
         [Required]
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         [Required]
-        public List<string> Items { get; set; }
+        public List<Item> Items { get; set; }
 
         [Required]
         public decimal Amount { get; set; }
 
         [Required]
-        public string Address { get; set; }
+        public Address Address { get; set; }
 
         public string Status { get; set; } = "Food Processing";
 

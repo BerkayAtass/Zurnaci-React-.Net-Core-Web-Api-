@@ -3,32 +3,129 @@ import './PlaceOrder.css'
 import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { use } from 'react'
+import { toast } from 'react-toastify'
+import axios from 'axios'
+
+
 
 const PlaceOrder = () => {
 
-    const { getTotalCartAmount } = useContext(StoreContext)
+    const { getTotalCartAmount, auth, food_list, cartItems, getUserData, resetCart, paymentHandler } = useContext(StoreContext)
+    // useEffect(() => { console.log(auth.id) }, [])
+    const [data, setData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        street: "",
+        city: "",
+        state: "",
+        zipcode: "",
+        country: "",
+        phone: ""
+    })
+
+    const onChangeHandler = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setData(data => ({ ...data, [name]: value }))
+    }
+
+    const placeOrder = async (event) => {
+        event.preventDefault();
 
 
+
+        let orderItems = [];
+        food_list.forEach((item) => {
+            if (cartItems[item.id] > 0) {
+                let itemInfo = {
+                    id: 0,
+                    orderId: 0,
+                    foodId: item.id,
+                    category: item.category,
+                    description: item.description,
+                    image: item.image,
+                    name: item.name,
+                    price: item.price,
+                    quantity: cartItems[item.id],
+                };
+                orderItems.push(itemInfo);
+            }
+        });
+
+
+        console.log(orderItems);
+        let orderData = {
+            id: 0,
+            userId: getUserData.id,
+            address: data,
+            items: orderItems,
+            amount: getTotalCartAmount() + 2,
+            status: "Food Processing",
+            payment: true,
+            date: new Date().toISOString(),
+        };
+
+        try {
+            let response = await axios.post('https://localhost:7007/api/order', orderData, {
+                headers: { 'Content-Type': 'application/json' },
+            });
+
+            toast.success("Order placed successfully!");
+            paymentHandler();
+            resetCart();
+            navigate('/');
+        } catch (error) {
+            console.error("Error placing order:", error);
+            toast.info("Your order is being processed. Please check back later.");
+            paymentHandler();
+            resetCart();
+            navigate('/');
+        }
+    };
+
+    const navigate = useNavigate();
+
+    // useEffect(() => {
+    //     if (globalUserData) {
+    //         console.log(globalUserData)
+    //     } else {
+    //         console.log('globalUserData missing')
+    //     }
+    // }, [])
+
+    useEffect(() => {
+        console.log(getUserData)
+        if (!auth) {
+            navigate('/cart')
+        }
+        else if (getTotalCartAmount() === 0) {
+            navigate('/cart')
+        }
+    }, [auth])
 
     return (
-        <form className='place-order'>
+        <form onSubmit={placeOrder} className='place-order'>
             <div className="place-order-left">
                 <p className="title">Delivery Information</p>
                 <div className="multi-fields">
-                    <input required name='firstName' type="text" placeholder='First Name' />
-                    <input required name='lastName' type="text" placeholder='Last Name' />
+                    <input required name='firstName' onChange={onChangeHandler} type="text" placeholder='First Name' />
+                    <input required name='lastName' onChange={onChangeHandler} type="text" placeholder='Last Name' />
                 </div>
-                <input className='emaill' required name='email' type="email" placeholder='Email address' />
-                <input className='streett' required name='street' type="text" placeholder='Street' />
+                <input className='emaill' onChange={onChangeHandler} required name='email' type="email" placeholder='Email address' />
+                <input className='streett' onChange={onChangeHandler} required name='street' type="text" placeholder='Street' />
                 <div className="multi-fields">
-                    <input required name='city' type="text" placeholder='City' />
-                    <input required name='state' type="text" placeholder='State' />
+                    <input required name='city' onChange={onChangeHandler} type="text" placeholder='City' />
+                    <input required name='state' onChange={onChangeHandler} type="text" placeholder='State' />
                 </div>
                 <div className="multi-fields">
-                    <input required name='zipcode' type="text" placeholder='Zip code' />
-                    <input required name='country' type="text" placeholder='Country' />
+                    <input required name='zipcode' onChange={onChangeHandler} type="text" placeholder='Zip code' />
+                    <input required name='country' onChange={onChangeHandler} type="text" placeholder='Country' />
                 </div>
-                <input className='phonee' required name='phone' type="text" placeholder='Phone' />
+                <input className='phonee' onChange={onChangeHandler} required name='phone' type="text" placeholder='Phone' />
             </div>
             <div className="place-order-right">
                 <div className="cart-total">
