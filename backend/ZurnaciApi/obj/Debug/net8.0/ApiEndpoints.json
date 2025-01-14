@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "ZurnaciApi.Controllers.AuthController",
+    "Method": "AdminLogin",
+    "RelativePath": "api/auth/admin-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginData",
+        "Type": "ZurnaciApi.Dtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZurnaciApi.Controllers.AuthController",
+    "Method": "AdminOnlyEndpoint",
+    "RelativePath": "api/auth/admin-only",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZurnaciApi.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/auth/login",
     "HttpMethod": "POST",
@@ -36,6 +62,22 @@
       {
         "Name": "user",
         "Type": "ZurnaciApi.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZurnaciApi.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDto",
+        "Type": "ZurnaciApi.Dtos.ResetPasswordDto",
         "IsRequired": true
       }
     ],
@@ -422,17 +464,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ZurnaciApi.Models.User",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ZurnaciApi.Controllers.UserController",
@@ -449,7 +481,7 @@
       },
       {
         "Name": "user",
-        "Type": "ZurnaciApi.Models.User",
+        "Type": "ZurnaciApi.Dtos.userUpdateDto",
         "IsRequired": true
       }
     ],

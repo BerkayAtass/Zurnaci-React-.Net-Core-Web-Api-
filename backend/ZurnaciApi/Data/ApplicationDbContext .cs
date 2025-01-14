@@ -28,6 +28,20 @@ namespace ZurnaciApi.Data
                 .WithOne() // No navigation property in Item for Order
                 .HasForeignKey(i => i.OrderId) // Foreign key to Order
                 .OnDelete(DeleteBehavior.Cascade); // Cascade delete for items when order is deleted
+
+          
+            var adminUser = new User
+            {
+                Id = -1,
+                Name = "admin",
+                Email = "admin@admin.com",
+                Password = BCrypt.Net.BCrypt.HashPassword("admin"), 
+                isAdmin = true,
+                balance = 10000,
+                OrderId = new List<int>() 
+            };
+
+            modelBuilder.Entity<User>().HasData(adminUser);
         }
     }
 

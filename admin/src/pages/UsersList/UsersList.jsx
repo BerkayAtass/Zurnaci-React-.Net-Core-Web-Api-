@@ -56,7 +56,7 @@ const UsersList = () => {
         setEditName('');
         setEditEmail('');
         setEditBalance('');
-        setEditPassword('');
+        // setEditPassword('');
         setEditIsAdmin('');
     }
 
@@ -65,9 +65,9 @@ const UsersList = () => {
     const [editName, setEditName] = useState('');
     const [editEmail, setEditEmail] = useState('');
     const [editBalance, setEditBalance] = useState('');
-    const [editPassword, setEditPassword] = useState('');
+    // const [editPassword, setEditPassword] = useState('');
     const [editIsAdmin, setEditIsAdmin] = useState('');
-    const [cartData, setCartData] = useState([]);
+    // const [orderId, setOrderId] = useState([]);
 
 
 
@@ -79,9 +79,9 @@ const UsersList = () => {
             setEditName(res.data.name);
             setEditEmail(res.data.email);
             setEditBalance(res.data.balance);
-            setEditPassword(res.data.password);
+            // setEditPassword(res.data.password);
             setEditIsAdmin(res.data.isAdmin);
-            setCartData(res.data.cartData);
+            // setOrderId(res.data.orderId);
         }).catch((err) => {
             toast.error(err)
         });
@@ -96,9 +96,9 @@ const UsersList = () => {
             "name": editName,
             "email": editEmail,
             "balance": editBalance,
-            "password": editPassword,
+            // "password": editPassword,
             "isAdmin": value,
-            "cartData": cartData
+            // "orderId": orderId
         };
 
         axios.put(url, data)
@@ -118,27 +118,27 @@ const UsersList = () => {
 
     return (
         <>
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} >
                 <div className="modal-container">
-                    <Modal.Header closeButton>
+                    <Modal.Header>
                         <Modal.Title>Modify / Update User</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Row>
                             <Col>
-                                <input type="text" placeholder="Enter USer Name" className='form-control' value={editName} onChange={(e) => setEditName(e.target.value)} />
+                                <input type="text" placeholder="Enter User Name" className='form-control' value={editName} onChange={(e) => setEditName(e.target.value)} />
                             </Col>
                             <Col>
-                                <input type="email" placeholder="Enter email" className='form-control' value={editEmail} onChange={(e) => setEditEmail(e.target.value)} />
+                                <input type="email" placeholder="Enter Email" className='form-control' value={editEmail} onChange={(e) => setEditEmail(e.target.value)} />
                             </Col>
-                            <Col>
+                            {/* <Col>
                                 <input type="text" placeholder="Enter Password" className='form-control' value={editPassword} onChange={(e) => setEditPassword(e.target.value)} />
-                            </Col>
+                            </Col> */}
                             <Col>
                                 <input type="text" placeholder="Enter Balance" className='form-control' value={editBalance} onChange={(e) => setEditBalance(e.target.value)} />
                             </Col>
                             <Col>
-                                {/* <input type="text" placeholder="Enter Category" className='form-control' value={editCategory} onChange={(e) => setEditCategory(e.target.value)} /> */}
+
                                 <p>Is Admin?</p>
                                 <select onChange={(e) => setEditIsAdmin(e.target.value)} name="isAdmin">
                                     <option defaultValue={editIsAdmin}>{editIsAdmin ? "admin" : "costumer"}</option>
@@ -158,14 +158,14 @@ const UsersList = () => {
                         </Button>
                     </Modal.Footer>
                 </div>
-            </Modal>
+            </Modal >
             <Table striped bordered hover className="list-table">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Password</th>
+                        {/* <th>Password</th> */}
                         <th>Balance</th>
                         <th >isAdmin</th>
                         <th colSpan="2">Action</th>
@@ -177,7 +177,7 @@ const UsersList = () => {
                             <td>{index + 1}</td>
                             <td>{item.name}</td>
                             <td className="break-line">{item.email}</td>
-                            <td>{item.password}</td>
+                            {/* <td>{item.password}</td> */}
                             <td>{item.balance}</td>
                             <td>{item.isAdmin ? "yes" : "no"}</td>
                             <td>

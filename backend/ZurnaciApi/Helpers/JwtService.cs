@@ -1,5 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 
@@ -26,6 +27,31 @@ namespace ZurnaciApi.Helpers
             return new JwtSecurityTokenHandler().WriteToken(securityToken);
         }
 
+        public string Generate(int id, bool isAdmin)
+        {
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secureKey));
+            var credentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
+            var header = new JwtHeader(credentials);
+
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, id.ToString()),
+                new Claim("isAdmin", isAdmin.ToString()) 
+            };
+
+            var payload = new JwtPayload(
+                issuer: null,
+                audience: null,
+                claims: claims,
+                notBefore: DateTime.UtcNow,
+                expires: DateTime.UtcNow.AddDays(1)
+            );
+
+            var securityToken = new JwtSecurityToken(header, payload);
+
+            return new JwtSecurityTokenHandler().WriteToken(securityToken);
+        }
+
         public JwtSecurityToken Verify(string jwt)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -40,5 +66,7 @@ namespace ZurnaciApi.Helpers
 
             return (JwtSecurityToken)validatedToken;
         }
+
+
     }
 }

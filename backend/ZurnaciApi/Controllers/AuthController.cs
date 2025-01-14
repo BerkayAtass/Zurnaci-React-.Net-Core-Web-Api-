@@ -60,23 +60,74 @@ namespace ZurnaciApi.Controllers
                 Expires = DateTime.Now.AddHours(1)
             });
 
-            var isAdmin = user.isAdmin;
-
-            if (isAdmin)
-            {
-                var adminCookieValue = BCrypt.Net.BCrypt.HashPassword("ThisManAdmin");
-
-                
-                Response.Cookies.Append("isAdmin", adminCookieValue, new CookieOptions
-                {
-                    //HttpOnly = true,
-                    Secure = true,  
-                    Expires = DateTime.Now.AddHours(1)  
-                });
-            }
 
             return Ok(new { token = jwt });
         }
+
+        [HttpPost("admin-login")]
+        public async Task<IActionResult> AdminLogin([FromBody] LoginDto loginData)
+        {
+            
+            var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == loginData.Email);
+
+
+            if (user == null || !BCrypt.Net.BCrypt.Verify(loginData.Password, user.Password))
+            {
+                return BadRequest(new { message = "Invalid Credentials" });
+            }
+
+            if (!user.isAdmin)
+            {
+                return Forbid(new { message = "Access denied. Only admins can log in." });
+            }
+
+            var jwt = _jwtService.Generate(user.Id, user.isAdmin);
+
+            
+            Response.Cookies.Append("jwt", jwt, new CookieOptions
+            {
+                //HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+                Expires = DateTime.UtcNow.AddDays(1)
+            });
+
+            return Ok(new { token = jwt, message = "Admin login successful" });
+        }
+
+        private IActionResult Forbid(object value)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpGet("admin-only")]
+        public IActionResult AdminOnlyEndpoint()
+        {
+            try
+            {
+                var jwt = Request.Cookies["jwt"];
+                if (jwt == null)
+                {
+                    return Unauthorized();
+                }
+
+                var token = _jwtService.Verify(jwt);
+
+                // isAdmin kontrolü
+                var isAdmin = token.Claims.FirstOrDefault(c => c.Type == "isAdmin")?.Value;
+                if (isAdmin == null || isAdmin != "True")
+                {
+                    return Forbid();
+                }
+
+                return Ok(new { message = "Welcome, Admin!" });
+            }
+            catch
+            {
+                return Unauthorized();
+            }
+        }
+
 
         [HttpGet("user")]
         public async Task<IActionResult> GetUser()

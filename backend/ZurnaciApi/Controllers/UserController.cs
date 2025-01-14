@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ZurnaciApi.Data;
+using ZurnaciApi.Dtos;
 using ZurnaciApi.Models;
 
 namespace ZurnaciApi.Controllers
@@ -20,14 +22,24 @@ namespace ZurnaciApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+           var users = await _context.Users.Select(u => new { u.Id, u.Name, u.Email, u.isAdmin, u.balance }).ToListAsync();
+           return Ok(users);
         }
 
-        
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<User>> GetUser([FromRoute] int id)
+        public async Task<ActionResult> GetUser([FromRoute] int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users
+                .Where(u => u.Id == id)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.Name,
+                    u.Email,
+                    u.isAdmin,
+                    u.balance
+                })
+                .FirstOrDefaultAsync();
 
             if (user == null)
             {
@@ -37,7 +49,7 @@ namespace ZurnaciApi.Controllers
             return Ok(user);
         }
 
-        
+
         [HttpPost]
         public async Task<ActionResult<User>> CreateUser([FromBody] User user)
         {
@@ -55,9 +67,9 @@ namespace ZurnaciApi.Controllers
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
 
-
+        
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser([FromRoute] int id, [FromBody] User user)
+        public async Task<IActionResult> UpdateUser([FromRoute] int id, [FromBody] userUpdateDto user)
         {
             if (id != user.Id)
             {
@@ -70,7 +82,16 @@ namespace ZurnaciApi.Controllers
                 return NotFound();
             }
 
+            existingUser.Name = user.Name;
+            existingUser.Email = user.Email;
             existingUser.balance = user.balance;
+            existingUser.isAdmin = user.isAdmin;
+
+            //if (!string.IsNullOrWhiteSpace(user.Password))
+            //{
+            //    existingUser.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+            //}
+
             _context.Entry(existingUser).State = EntityState.Modified;
 
             try
@@ -91,7 +112,6 @@ namespace ZurnaciApi.Controllers
 
             return NoContent();
         }
-
 
 
         [HttpDelete("{id:int}")]
