@@ -49,10 +49,11 @@ const LoginPopUp = ({ setShowLogin }) => {
             }
 
             if (url === 'https://localhost:7007/api/auth/register') {
-                toast.success('Account created successfully');
+                toast.success('Account created successfully.');
             }
 
             if (url === 'https://localhost:7007/api/auth/login') {
+                toast.success('Welcome to our restaurant.');
                 // Cookies.set('jwt-auth', data.token);
                 setAuth(true);
 
@@ -77,6 +78,7 @@ const LoginPopUp = ({ setShowLogin }) => {
                 <div className="login-popup-inputs">
                     {currState === "Sign Up" && (
                         <input
+                            id='name'
                             type="text"
                             placeholder="Your name"
                             value={username}
@@ -85,6 +87,7 @@ const LoginPopUp = ({ setShowLogin }) => {
                         />
                     )}
                     <input
+                        id='email'
                         type="email"
                         placeholder="Your email"
                         value={email}
@@ -92,6 +95,7 @@ const LoginPopUp = ({ setShowLogin }) => {
                         required
                     />
                     <input
+                        id='password'
                         type="password"
                         placeholder="Your password"
                         value={password}
@@ -99,18 +103,18 @@ const LoginPopUp = ({ setShowLogin }) => {
                         required
                     />
                 </div>
-                <button type="submit" disabled={loading}>
+                <button type="submit" id='submitButton' disabled={loading}>
                     {currState === "Sign Up" ? "Create account" : "Login"}
                 </button>
                 {error && <p className="error-message">{error}</p>}
                 <div className="login-popup-condition">
-                    <input type="checkbox" required />
+                    <input type="checkbox" id='agreeTerm' required />
                     <p>By continuing, I agree to terms of use & privacy policy.</p>
                 </div>
                 {currState === "Login" ? (
                     <p>
                         Create a new account?{" "}
-                        <span onClick={() => setCurrState("Sign Up")}>Click Here</span>
+                        <span id='registerLink' onClick={() => setCurrState("Sign Up")}>Click Here</span>
                     </p>
                 ) : (
                     <p>

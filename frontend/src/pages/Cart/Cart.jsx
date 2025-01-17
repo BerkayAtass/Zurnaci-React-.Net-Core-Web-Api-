@@ -75,7 +75,7 @@ const Cart = ({ setShowLogin }) => {
                             <b>${getTotalCartAmount() + 2}</b>
                         </div>
                     </div>
-                    <button onClick={OrderHandler} >Proceed to Checkout</button >
+                    <button id='proceedButton' onClick={OrderHandler} >Proceed to Checkout</button >
                 </div>
             </div>
         </div >

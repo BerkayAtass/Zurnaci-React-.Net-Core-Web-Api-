@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "3ac17665-d65a-44e9-838c-60c90f840b35",
+		"name": "Zurnaci",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40048844"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"name\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"isAdmin\": true,\r\n    \"balance\": 0,\r\n    \"cartData\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/Auth/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"Auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/Auth/logout",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"Auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/Auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"ww@ww.com\",\r\n  \"password\": \"ww\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7007/api/Auth/login",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7007",
+									"path": [
+										"api",
+										"Auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 04:38:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzcxNDc2MDAsImlzcyI6IjE5In0.dcDqJ_9vgOwHQ5XRV8zT4NTnwBln00Buhp-NaSCAhMA; expires=Fri, 17 Jan 2025 05:38:24 GMT; path=/; secure; samesite=none"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzcxNDc2MDAsImlzcyI6IjE5In0.dcDqJ_9vgOwHQ5XRV8zT4NTnwBln00Buhp-NaSCAhMA\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/Auth/admin-login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"Auth",
+								"admin-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"{{oldPassword}}\",\r\n  \"newPassword\": \"{{newPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/auth/reset-password",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Verify",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/auth/admin-only",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"auth",
+								"admin-only"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/Auth/user",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"Auth",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Auth User Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7007/api/Auth/user",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7007",
+									"path": [
+										"api",
+										"Auth",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 04:53:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 19,\n    \"name\": \"ww\",\n    \"email\": \"ww@ww.com\",\n    \"password\": \"$2a$11$QwbrycjY1Dcu3pgtff5nWuo5LX6uJCdR94VI5.9Mv3PeOpI7krhHy\",\n    \"isAdmin\": false,\n    \"balance\": 9030,\n    \"orderId\": [\n        48,\n        49,\n        50,\n        51,\n        52,\n        53,\n        54,\n        55\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Food",
+			"item": [
+				{
+					"name": "Foods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/food",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Food",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/food/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"food",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Food Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"description\": \"string\",\r\n  \"price\": 0,\r\n  \"image\": \"string\",\r\n  \"category\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/food/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"food",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Food Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"description\": \"string\",\r\n  \"price\": 0,\r\n  \"image\": \"string\",\r\n  \"category\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/food/1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"food",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/user/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/user/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\",\r\n  \"isAdmin\": true,\r\n  \"balance\": 0,\r\n  \"orderId\": [\r\n    0\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/user",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"email\": \"user@example.com\",\r\n  \"isAdmin\": true,\r\n  \"balance\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/user/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/user/1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"user",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/order/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"userId\": {{userId}},\r\n  \"items\": [\r\n    {\r\n      \"id\": 0,\r\n      \"orderId\": 0,\r\n      \"foodId\": 0,\r\n      \"name\": \"string\",\r\n      \"description\": \"string\",\r\n      \"price\": 0,\r\n      \"image\": \"string\",\r\n      \"category\": \"string\",\r\n      \"quantity\": 0\r\n    }\r\n  ],\r\n  \"amount\": 0,\r\n  \"address\": {\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"street\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"zipcode\": \"string\",\r\n    \"country\": \"string\",\r\n    \"phone\": \"string\"\r\n  },\r\n  \"status\": \"string\",\r\n  \"date\": \"2025-01-17T03:22:47.047Z\",\r\n  \"payment\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/order/1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"order",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Orders / update status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7007/api/order/update-status/14",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"order",
+								"update-status",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Orders / user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7007/api/order/myorders/{{userId}}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7007",
+							"path": [
+								"api",
+								"order",
+								"myorders",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -3,6 +3,7 @@ import './Profile.css';
 import axios from 'axios';
 import { StoreContext } from '../../context/StoreContext';
 import { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 
 const Profile = () => {
@@ -27,9 +28,9 @@ const Profile = () => {
                 },
                 { withCredentials: true }
             );
-            alert('Password updated successfully!');
+            toast.success('Password updated successfully!');
         } catch (error) {
-            alert('Failed to update password. Please try again.');
+            toast.error('Failed to update password. Please try again.');
             console.error(error);
         }
     };
@@ -42,6 +43,7 @@ const Profile = () => {
                 <div>
                     <label>Old Password:</label>
                     <input
+                        id='oldPassword'
                         type="password"
                         value={oldPassword}
                         onChange={(e) => setOldPassword(e.target.value)}
@@ -50,6 +52,7 @@ const Profile = () => {
                 <div>
                     <label>New Password:</label>
                     <input
+                        id='newPassword1'
                         type="password"
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
@@ -58,12 +61,13 @@ const Profile = () => {
                 <div>
                     <label>Confirm New Password:</label>
                     <input
+                        id='newPassword2'
                         type="password"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 </div>
-                <button onClick={handlePasswordChange}>Update Password</button>
+                <button id='submitPass' onClick={handlePasswordChange}>Update Password</button>
             </div>
         </div>
     );

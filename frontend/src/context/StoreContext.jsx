@@ -153,6 +153,7 @@ const StoreContextProvider = (props) => {
             Cookies.remove('jwt');
             setAuth(false);
             resetCart();
+            toast.success('Logged out successfully.');
         } catch (error) {
             console.error("Logout failed:", error);
         }

@@ -112,20 +112,20 @@ const PlaceOrder = () => {
             <div className="place-order-left">
                 <p className="title">Delivery Information</p>
                 <div className="multi-fields">
-                    <input required name='firstName' onChange={onChangeHandler} type="text" placeholder='First Name' />
-                    <input required name='lastName' onChange={onChangeHandler} type="text" placeholder='Last Name' />
+                    <input required name='firstName' id='firstName' onChange={onChangeHandler} type="text" placeholder='First Name' />
+                    <input required name='lastName' id='lastName' onChange={onChangeHandler} type="text" placeholder='Last Name' />
                 </div>
-                <input className='emaill' onChange={onChangeHandler} required name='email' type="email" placeholder='Email address' />
-                <input className='streett' onChange={onChangeHandler} required name='street' type="text" placeholder='Street' />
+                <input className='emaill' id='email' onChange={onChangeHandler} required name='email' type="email" placeholder='Email address' />
+                <input className='streett' id='street' onChange={onChangeHandler} required name='street' type="text" placeholder='Street' />
                 <div className="multi-fields">
-                    <input required name='city' onChange={onChangeHandler} type="text" placeholder='City' />
-                    <input required name='state' onChange={onChangeHandler} type="text" placeholder='State' />
+                    <input required name='city' id='city' onChange={onChangeHandler} type="text" placeholder='City' />
+                    <input required name='state' id='state' onChange={onChangeHandler} type="text" placeholder='State' />
                 </div>
                 <div className="multi-fields">
-                    <input required name='zipcode' onChange={onChangeHandler} type="text" placeholder='Zip code' />
-                    <input required name='country' onChange={onChangeHandler} type="text" placeholder='Country' />
+                    <input required name='zipcode' id='zipCode' onChange={onChangeHandler} type="text" placeholder='Zip code' />
+                    <input required name='country' id='country' onChange={onChangeHandler} type="text" placeholder='Country' />
                 </div>
-                <input className='phonee' onChange={onChangeHandler} required name='phone' type="text" placeholder='Phone' />
+                <input className='phonee' id='phone' onChange={onChangeHandler} required name='phone' type="text" placeholder='Phone' />
             </div>
             <div className="place-order-right">
                 <div className="cart-total">
@@ -146,7 +146,7 @@ const PlaceOrder = () => {
                             <b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
                         </div>
                     </div>
-                    <button type='submit'>PROCEED TO PAYMENT</button>
+                    <button id='proceedButton' type='submit'>PROCEED TO PAYMENT</button>
                 </div>
             </div>
         </form>
